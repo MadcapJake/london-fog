@@ -48,5 +48,5 @@ module.exports =
               '1em'
             else
               "-#{uglySpaces}em"
-          console.log "margin-right: #{ element.dataset.fogLength };"
-          console.log "content: #{element.dataset.fogContent}"
+          console.log "margin-right: #{ element.dataset.fogLength }"
+          console.log "content: #{ element.dataset.fogContent }"
