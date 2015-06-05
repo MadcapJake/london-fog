@@ -1,0 +1,17 @@
+atom-text-editor::shadow {
+  .line:not(.cursor-line) {
+    .fogged {
+      display: inline-block;
+      visibility: hidden;
+
+      &:before {
+        content: attr(data-fog-content);
+        display: inline-block;
+        visibility: visible;
+        width: 0;
+        // margin-right: -1em;
+        margin-right: attr(data-fog-length);
+      }
+    }
+  }
+}

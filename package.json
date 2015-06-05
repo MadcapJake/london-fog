@@ -1,0 +1,23 @@
+{
+  "name": "london-fog",
+  "main": "./lib/london-fog",
+  "version": "0.0.1",
+  "description": "Conceal some EG operators and replace with unicode!",
+  "keywords": [
+    "earl-grey",
+    "language",
+    "syntax",
+    "text",
+    "conceal"
+  ],
+  "activationCommands": {
+    "atom-workspace": "london-fog:toggle"
+  },
+  "repository": "https://github.com/atom/london-fog",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

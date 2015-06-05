@@ -1,0 +1,22 @@
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
+'context-menu':
+  'atom-text-editor': [
+    {
+      'label': 'Toggle london-fog'
+      'command': 'london-fog:toggle'
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'london-fog'
+      'submenu': [
+        {
+          'label': 'Toggle'
+          'command': 'london-fog:toggle'
+        }
+      ]
+    ]
+  }
+]
