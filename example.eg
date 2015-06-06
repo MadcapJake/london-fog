@@ -1,0 +1,37 @@
+require:
+   kettle, steamer, friend
+
+global:
+   cafe
+
+class LondonFogDrink:
+   tea-brewed = false
+   milk-steamed = false
+   vanilla-added = false
+   contents = null
+
+   constructor(@milk, @vanilla, @tea, @water) =
+      chain this:
+         @brew(@tea) with @water
+         @heat: @milk
+         @add: vanilla
+
+   brew = (t, w) ->
+      if w <= 0.5:
+         hot-water = kettle.boil with w
+         mug.add([t, hot-water]) where
+            mug = cafe.getMugSync()
+         setTimeout -> @contents = mug: (120 * 1000)
+      return @
+
+   heat = m ->
+      EnoughMilk? m >> steamer.heat(m) = m
+      return @
+
+   add = match spices ->
+      {spice} ->
+         mug.add(spice)
+         return @
+      {spice, *rst} ->
+         mug.add(spice)
+         @add: rst
